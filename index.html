@@ -25,8 +25,47 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Your Name</h1>
-            <p>Web Developer & Designer</p>
+            <div class="glitch-wrapper">
+                <p id="glitch-text" class="glitch" data-text="Web Developer & Designer">Web Developer & Designer</p>
+            </div>
         </div>
+        <script>
+            const phrases = [
+                "Web Developer & Designer",
+                "Full Stack Developer",
+                "UI/UX Designer",
+                "Problem Solver"
+            ];
+            
+            let currentIndex = 0;
+            const glitchText = document.getElementById("glitch-text");
+            
+            function updateText() {
+                // Add active class for glitch effect
+                glitchText.classList.add('active');
+                
+                // After small delay, update text and data-attribute
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % phrases.length;
+                    const newText = phrases[currentIndex];
+                    glitchText.textContent = newText;
+                    glitchText.setAttribute('data-text', newText);
+                    
+                    // Remove active class after glitch effect
+                    setTimeout(() => {
+                        glitchText.classList.remove('active');
+                    }, 750);
+                }, 750);
+            }
+            
+            // Initial delay before starting the cycle
+            setTimeout(() => {
+                // Update text every 4 seconds
+                setInterval(() => {
+                    updateText();
+                }, 4000);
+            }, 2000);
+        </script>
     </section>
 
     <section id="about">
@@ -53,9 +92,56 @@
                 <div class="project-content">
                     <h3>Project Name</h3>
                     <p>Description of your amazing project goes here.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <!-- Replace with project image -->
+                    <img src="/api/placeholder/300/200" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3>Another Project</h3>
+                    <p>Another description of an impressive project you've worked on.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub Repo</a>
+                    </div>
                 </div>
             </div>
             <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="certifications-grid">
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <!-- You can replace this with actual certification icons or logos -->
+                    <img src="/api/placeholder/100/100" alt="Certification Icon">
+                </div>
+                <div class="certification-content">
+                    <h3>Certification Name</h3>
+                    <p>Issued by Organization</p>
+                    <p>Date Earned: Month Year</p>
+                </div>
+            </div>
+            <div class="certification-card">
+                <div class="certification-icon">
+                    <!-- You can replace this with actual certification icons or logos -->
+                    <img src="/api/placeholder/100/100" alt="Certification Icon">
+                </div>
+                <div class="certification-content">
+                    <h3>Another Certification</h3>
+                    <p>Issued by Organization</p>
+                    <p>Date Earned: Month Year</p>
+                </div>
+            </div>
+            <!-- Add more certification cards as needed -->
         </div>
     </section>
 

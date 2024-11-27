@@ -46,7 +46,63 @@ nav {
     color: #007bff;
 }
 
-/* Hero Section */
+/* Glitch Text Effect */
+.glitch-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch {
+    position: relative;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.glitch.active::before {
+    animation: glitch-effect 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    color: #00ffff;
+    z-index: 1;
+}
+
+.glitch.active::after {
+    animation: glitch-effect 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    color: #ff00ff;
+    z-index: 2;
+}
+
+@keyframes glitch-effect {
+    0% {
+        transform: translate(0);
+        opacity: 0.5;
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+        opacity: 0.5;
+    }
+}
 .hero {
     height: 100vh;
     display: flex;
@@ -115,11 +171,12 @@ section {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .project-image {
@@ -141,6 +198,72 @@ section {
 
 .project-content h3 {
     margin-bottom: 0.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #0056b3;
+}
+
+/* Certifications Section */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.certification-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.certification-icon {
+    width: 100px;
+    height: 100px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.certification-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.certification-content h3 {
+    margin-bottom: 0.5rem;
+}
+
+.certification-content p {
+    color: #666;
+    font-size: 0.9rem;
 }
 
 /* Contact Section */
