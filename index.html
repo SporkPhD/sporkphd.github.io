@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="glitch.js" defer></script>
 </head>
 <body>
     <nav>
@@ -54,17 +55,17 @@
                     // Remove active class after glitch effect
                     setTimeout(() => {
                         glitchText.classList.remove('active');
-                    }, 750);
-                }, 750);
+                    }, 300); // Reduced from 750ms to 300ms
+                }, 300); // Reduced from 750ms to 300ms
             }
             
             // Initial delay before starting the cycle
             setTimeout(() => {
-                // Update text every 4 seconds
+                // Update text every 3 seconds (reduced from 4)
                 setInterval(() => {
                     updateText();
-                }, 4000);
-            }, 2000);
+                }, 3000);
+            }, 1000); // Reduced initial delay from 2000ms to 1000ms
         </script>
     </section>
 
