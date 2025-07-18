@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Wesley Cox</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <div class="back-nav">
+            <a href="index.html" class="back-button">← Home</a>
+        </div>
+        
+        <div class="page-header">
+            <h1 class="page-title">About</h1>
+        </div>
+        
+        <div class="about-content">
+            <div class="bio-section">
+                <div class="bio-card">
+                    <h2>Hello, I'm Wesley</h2>
+                    <p>A passionate developer with a love for creating beautiful, functional digital experiences. I believe in the power of clean code, thoughtful design, and meaningful connections.</p>
+                    
+                    <p>When I'm not coding, you can find me exploring new technologies, reading about design philosophy, or enjoying a perfectly symmetrical cup of coffee.</p>
+                    
+                    <p>I approach each project with curiosity, precision, and a touch of whimsy—much like arranging objects in a perfectly balanced frame.</p>
+                </div>
+                
+                <div class="skills-card">
+                    <h3>Skills & Interests</h3>
+                    <ul class="skills-list">
+                        <li>Frontend Development</li>
+                        <li>Backend Architecture</li>
+                        <li>UI/UX Design</li>
+                        <li>Creative Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .bio-section {
+            display: flex;
+            gap: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .bio-card, .skills-card {
+            flex: 1;
+            background: var(--warm-beige);
+            border: 2px solid var(--dark-brown);
+            padding: 30px;
+        }
+        
+        .bio-card h2, .skills-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-brown);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .bio-card p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: var(--dark-brown);
+            opacity: 0.9;
+        }
+        
+        .skills-list {
+            list-style: none;
+            text-align: center;
+        }
+        
+        .skills-list li {
+            background: var(--accent-mint);
+            margin: 10px 0;
+            padding: 12px;
+            border: 1px solid var(--dark-brown);
+            font-weight: 500;
+        }
+    </style>
+</body>
+</html>

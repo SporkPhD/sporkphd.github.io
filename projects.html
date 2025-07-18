@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Wesley Cox</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <div class="back-nav">
+            <a href="index.html" class="back-button">← Home</a>
+        </div>
+        
+        <div class="page-header">
+            <h1 class="page-title">Projects</h1>
+        </div>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project One</h3>
+                <p>A beautifully crafted web application with attention to detail and user experience.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            
+            <div class="project-card">
+                <h3>Project Two</h3>
+                <p>An innovative solution combining modern technology with timeless design principles.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            
+            <div class="project-card">
+                <h3>Project Three</h3>
+                <p>A collaborative effort showcasing the harmony between functionality and aesthetics.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            
+            <div class="project-card">
+                <h3>Project Four</h3>
+                <p>An experimental piece exploring new frontiers in digital interaction and design.</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .project-card {
+            background: var(--secondary-yellow);
+            border: 2px solid var(--dark-brown);
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:nth-child(2n) {
+            background: var(--primary-pink);
+        }
+        
+        .project-card:nth-child(3n) {
+            background: var(--accent-mint);
+        }
+        
+        .project-card:nth-child(4n) {
+            background: var(--muted-blue);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--dark-brown);
+            margin-bottom: 15px;
+        }
+        
+        .project-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--dark-brown);
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .project-link {
+            background: var(--dark-brown);
+            color: var(--cream);
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: 600;
+            border: 2px solid var(--dark-brown);
+            transition: all 0.3s ease;
+        }
+        
+        .project-link:hover {
+            background: var(--cream);
+            color: var(--dark-brown);
+        }
+    </style>
+</body>
+</html>

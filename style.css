@@ -1,0 +1,163 @@
+/* Wes Anderson Inspired Design */
+:root {
+    --primary-pink: #F7CAC9;
+    --secondary-yellow: #F7DC6F;
+    --accent-mint: #ABEBC6;
+    --warm-beige: #F4F1DE;
+    --soft-coral: #FFB3BA;
+    --muted-blue: #BAE1FF;
+    --dark-brown: #8B4513;
+    --cream: #FFF8DC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: linear-gradient(135deg, var(--warm-beige) 0%, var(--cream) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-brown);
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid var(--primary-pink);
+    border-radius: 0;
+    padding: 60px 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--dark-brown);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--dark-brown);
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 50px;
+}
+
+.nav-button {
+    background: var(--secondary-yellow);
+    color: var(--dark-brown);
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border: 2px solid var(--dark-brown);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-button:first-child {
+    background: var(--primary-pink);
+}
+
+.nav-button:last-child {
+    background: var(--accent-mint);
+}
+
+.nav-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-card {
+    background: var(--muted-blue);
+    border: 2px solid var(--dark-brown);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.welcome-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--dark-brown);
+}
+
+.welcome-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark-brown);
+    opacity: 0.9;
+}
+
+/* Shared styles for all pages */
+.page-container {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid var(--primary-pink);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--dark-brown);
+    margin-bottom: 20px;
+}
+
+.back-nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    background: var(--soft-coral);
+    color: var(--dark-brown);
+    text-decoration: none;
+    padding: 12px 25px;
+    font-weight: 600;
+    border: 2px solid var(--dark-brown);
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
